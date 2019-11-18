@@ -5,7 +5,8 @@ class Balance extends Component {
         super(props)
     }
     render(){
-        return <h1>this is my balance</h1>
+       return <h1>Balance <input type="text"/></h1>
+     
     }
 }
 export default Balance

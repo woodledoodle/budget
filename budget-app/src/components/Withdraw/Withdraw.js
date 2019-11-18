@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 
 
-class Deposit extends Component {
+class Withdraw extends Component {
     constructor(props){
         super(props)
         this.state={
-            depositAmount: 0
+            withdrawAmount: 0
         }
         this.handleChange=this.handleChange.bind(this)
         this.handleClick=this.handleClick.bind(this)
@@ -13,18 +13,18 @@ class Deposit extends Component {
     handleChange(e){
         console.log("changing",(e.target.value))
         this.setState({
-            depositAmount:e.target.value
+            withdrawAmount:e.target.value
         })
     }
     handleClick(){
-        console.log("depositing amount", this.state.depositAmount)
+        console.log("withdrawing amount", this.state.withdrawAmount)
     }
     render(){
         return(
             <div>
-                <h2>Deposit</h2>
-                <input type='text' value={this.state.depositAmount} onChange={(e) =>{this.handleChange(e)}}/>
-                <button onClick={this.handleClick} >Make Deposit</button>
+                <h2>Withdraw</h2>
+                <input type='text' value={this.state.withdrawAmount} onChange={(e) =>{this.handleChange(e)}}/>
+                <button onClick={this.handleClick} >Make Withdraw</button>
             </div>
         )
 
@@ -33,4 +33,4 @@ class Deposit extends Component {
    
 }
 
-export default Deposit
+export default Withdraw
